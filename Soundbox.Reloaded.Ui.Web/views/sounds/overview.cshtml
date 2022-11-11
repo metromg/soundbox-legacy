@@ -1,0 +1,41 @@
+﻿<div class="row"
+     ng-hide="currentSound == null">
+    <div class="col-md-3 col-xs-12">
+        <div class="row">
+            <div class="col-md-12 col-sm-4 col-xs-6 col-md-offset-0 col-sm-offset-4 col-xs-offset-3">
+                <img class="img-rounded" style="width: 100%;"
+                     ng-src="{{currentSound.Sound.imageFilePathOrDefault()}}" />
+            </div>
+        </div>
+    </div>
+    <div class="col-md-9 col-xs-12">
+        <sound-player sound="currentSound"></sound-player>
+    </div>
+</div>
+<div class="row"
+     ng-show="currentSound == null">
+    <div class="col-xs-12 text-center">
+        <h1><i class="icon-shocked"></i></h1>
+        <h1>It's #quiet here!</h1>
+    </div>
+</div>
+<br />
+<div class="row">
+    <div class="col-xs-12">
+        <ul class="nav nav-pills"
+            ng-init="isQueue = true">
+            <li ng-click="isQueue = true"
+                ng-class="{active: isQueue}">
+                <a>Queue</a>
+            </li>
+            <li ng-click="isQueue = false"
+                ng-class="{active: !isQueue}">
+                <a>Library</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-xs-12" ui-view="queue" ng-show="isQueue"></div>
+    <div class="col-xs-12" ui-view="library" ng-hide="isQueue"></div>
+</div>
+<hr />

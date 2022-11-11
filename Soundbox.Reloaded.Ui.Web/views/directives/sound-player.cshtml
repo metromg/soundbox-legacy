@@ -1,0 +1,39 @@
+﻿<div>
+    <div class="row">
+        <div class="col-xs-12 col-md-10">
+            <h1>
+                {{sound.Sound.Title}}
+                <small>#{{sound.Sound.CategoryName}}</small>
+            </h1>
+            <h4>{{sound.Sound.ArtistName}}</h4>
+        </div>
+        <div class="col-xs-3 col-md-2">
+            <br />
+            <slider programmatic-value="initialVolume" user-value="volume" commit-immediately="true"></slider>
+        </div>
+    </div>
+
+    <br />
+
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="form-group">
+                <div class="btn btn-primary"
+                     ng-click="playPause()">
+                    <i ng-class="{'icon-play': !sound.IsPlaying, 'icon-pause': sound.IsPlaying}"></i>
+                </div>
+                <div class="btn btn-primary"
+                     ng-click="playFromQueue()">
+                    <i class="icon-next"></i>
+                </div>
+
+                <div class="btn btn-default"
+                     ng-click="mute()">
+                    <i ng-class="{'icon-volume-high': !muted, 'icon-volume-mute': muted}"></i>
+                </div>
+            </div>
+            <div>{{currentTimeToDate() | date:'mm:ss'}} / {{sound.durationToDate() | date:'mm:ss'}}</div>
+            <slider programmatic-value="sound.currentProgressInPercent()" user-value="seekValue" slider-display-value="currentTimeInPercent"></slider>
+        </div>
+    </div>
+</div>

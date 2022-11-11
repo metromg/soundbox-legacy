@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html ng-app="soundbox">
+    <head>
+        <title>Soundbox</title>
+        <link rel="icon" href="~/assets/default-sound.png">
+        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=10; IE=edge">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+        <meta charset="utf-8" />
+
+        <link type="text/css" rel="stylesheet" href="~/styles/app.css" />
+        <link type="text/css" rel="stylesheet" href="~/styles/icons.css" />
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+        <script type="text/javascript" src="~/scripts/lib/jquery.signalR-2.2.0.min.js"></script>
+        <script src="signalr/hubs"></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-touch.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_de-ch.js"></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.14.3/ui-bootstrap-tpls.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/de.js"></script>
+        
+        <!--[if lte IE 9]>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/9.1.2/FileAPI.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/9.1.2/ng-file-upload-shim.js"></script>
+        <![endif]-->
+
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/danialfarid-angular-file-upload/9.1.2/ng-file-upload.js"></script>
+
+        <script type="text/javascript" src="~/scripts/app.all.js"></script>
+
+        <script type="text/javascript">
+            if (window.console === undefined) {
+                window.console = { log: function () { }, info: function () { }, warn: function () { }, error: function () { } };
+            }
+
+            angular.module('soundbox')
+                .constant("remotingHostRootUri", "@Url.Content("~")")
+                .constant("webRootUri", "@Url.Content("~")");
+        </script>
+    </head>
+    <body ng-controller="soundbox.views.index" ng-cloak>
+        <nav class="navbar navbar-primary navbar-fixed-top">
+            <div class="container-fluid text-center">
+                <i class="icon-music text-white icon-large"></i>
+            </div>
+        </nav>
+
+        <main class="container bg-white main">
+            <ui-view />
+        </main>
+
+        <footer class="container bg-dark text-white">
+            <div class="row">
+                <div class="col-xs-4">&copy; zyborgLP</div>
+                <div class="col-xs-4 text-center">
+                    <i class="icon-users"></i> {{userCount}}
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4F5AFF1-FB47-4455-B018-6F6D5DA27D5A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Soundbox.Reloaded.Infrastructure.DbAccess</RootNamespace>
+    <AssemblyName>Soundbox.Reloaded.Infrastructure.DbAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Domain\Sounds\SoundCategoryRepository.cs" />
+    <Compile Include="Domain\Sounds\SoundRepository.cs" />
+    <Compile Include="EntityFrameworkContext.cs" />
+    <Compile Include="Mapping\MappingBase.cs" />
+    <Compile Include="Mapping\Sounds\SoundCategoryMapping.cs" />
+    <Compile Include="Mapping\Sounds\SoundMapping.cs" />
+    <Compile Include="Migrations\201511071411440_AddSound.cs" />
+    <Compile Include="Migrations\201511071411440_AddSound.Designer.cs">
+      <DependentUpon>201511071411440_AddSound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511071945286_ImproveSound.cs" />
+    <Compile Include="Migrations\201511071945286_ImproveSound.Designer.cs">
+      <DependentUpon>201511071945286_ImproveSound.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511072003271_AddSoundCategory.cs" />
+    <Compile Include="Migrations\201511072003271_AddSoundCategory.Designer.cs">
+      <DependentUpon>201511072003271_AddSoundCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511101938290_FixDateTimeType.cs" />
+    <Compile Include="Migrations\201511101938290_FixDateTimeType.Designer.cs">
+      <DependentUpon>201511101938290_FixDateTimeType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201511101945317_RemoveCreatedOn.cs" />
+    <Compile Include="Migrations\201511101945317_RemoveCreatedOn.Designer.cs">
+      <DependentUpon>201511101945317_RemoveCreatedOn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Domain\Repository.cs" />
+    <Compile Include="UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Soundbox.Reloaded.Core\Soundbox.Reloaded.Core.csproj">
+      <Project>{6b80cf7c-4a27-45f7-a1d2-7d065b836764}</Project>
+      <Name>Soundbox.Reloaded.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201511071411440_AddSound.resx">
+      <DependentUpon>201511071411440_AddSound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511071945286_ImproveSound.resx">
+      <DependentUpon>201511071945286_ImproveSound.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511072003271_AddSoundCategory.resx">
+      <DependentUpon>201511072003271_AddSoundCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511101938290_FixDateTimeType.resx">
+      <DependentUpon>201511101938290_FixDateTimeType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201511101945317_RemoveCreatedOn.resx">
+      <DependentUpon>201511101945317_RemoveCreatedOn.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

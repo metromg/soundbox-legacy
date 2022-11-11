@@ -1,0 +1,29 @@
+﻿<div class="col-md-6 list-item">
+    <div class="media">
+        <div class="media-left text-center">
+            <img class="media-object" style="width: 90px"
+                 ng-src="{{sound.imageFilePathOrDefault()}}" />
+
+            <div class="list-item-overlay"
+                 ng-show="isInQueue"><i class="icon-file"></i></div>
+            <div class="list-item-overlay"
+                 ng-show="isPlaying"><i class="icon-play"></i></div>
+        </div>
+        <div class="media-body">
+            <h3>
+                {{sound.Title}}
+                <small>#{{sound.CategoryName}}</small>
+            </h3>
+            <h6>{{sound.ArtistName}}</h6>
+        </div>
+        <div class="media-right">
+            <div class="panel-body">
+                <div class="btn btn-danger"
+                     ng-show="onDeleteClick != null"
+                     ng-click="onDeleteClick(sound)">
+                    <i class="icon-trash"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

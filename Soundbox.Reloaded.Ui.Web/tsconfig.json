@@ -1,0 +1,13 @@
+﻿{
+    "compilerOptions": {
+        "noImplicitAny": true,
+        "outFile": "scripts/app.all.js",
+        "declaration": true,
+        "target": "es5",
+        "noEmitOnError": true,
+        "sourceMap": false
+    },
+    "files": [
+        "_references.ts"
+    ]
+}

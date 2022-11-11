@@ -1,0 +1,29 @@
+﻿<p>
+    <div class="input-group">
+        <div class="input-group-addon">
+            <i class="icon-search"></i>
+        </div>
+        <input type="text" class="form-control" placeholder="Search..."
+               ng-model="keyword" />
+    </div>
+</p>
+
+<div class="btn btn-primary"
+     ng-click="setLooping()">
+    <i title="{{isLooping ? 'Change to playlist mode' : 'Change to loop mode'}}"
+       ng-class="{'icon-redo': isLooping, 'icon-file': !isLooping}"></i>
+</div>
+
+<hr />
+
+<div ng-show="queue.length == 0">
+    <i>No sounds.</i>
+</div>
+
+<div class="row">
+    <sound-list-item ng-repeat="sound in queue | filter:keyword"
+                     sound="sound"
+                     is-playing="isSoundPlaying(sound)"
+                     on-delete-click="removeFromQueue">
+    </sound-list-item>
+</div>

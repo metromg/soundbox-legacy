@@ -1,0 +1,140 @@
+body {
+    margin-top: 50px;
+}
+
+#upper-top-right-bar {
+    position: absolute; right: 0; top: 12px;
+}
+
+#lower-top-right-bar {
+    position: absolute; right: 0; bottom: 0;
+
+    form {
+        display: inline-block;
+    }
+}
+
+header {
+    max-width: 1280px; 
+    margin: auto;
+}
+
+#banner {
+    height: 88px;
+    border-bottom: 10px solid @brand-primary;
+}
+
+
+// Overrides
+
+// navbar
+.navbar {
+    border: none;
+}
+.navbar-default {
+    .navbar-nav {
+        > li > a {
+          background-color: @navbar-default-link-bg;
+        }
+    }
+}
+
+// pagination
+.pagination {
+    margin-top: 0px;
+}
+
+// command
+.btn-toolbar .btn.command {
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.nav.nav-pills {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 25px;
+}
+
+.nav.nav-pills > li > a {
+    background: none;
+    color: @text-color;
+    border-radius: 0px;
+    cursor: pointer;
+}
+
+.nav.nav-pills > li.active > a {
+    background: none;
+    color: @brand-primary;
+    border-bottom: 1px solid @brand-primary;
+}
+
+.nav.nav-pills > li > a:hover,
+.nav.nav-pills > li.active > a:hover {
+    background: none;
+    color: @text-color;
+    border-bottom: 1px solid @text-color;
+}
+
+.btn {
+    border-radius: 0px;
+    outline: none;
+}
+
+.form-control,
+.input-group-addon {
+    border-radius: 0;
+}
+
+.icon-large {
+    font-size: 40px;
+}
+
+.text-white {
+    color: white;
+}
+
+.navbar-primary {
+    background: @brand-primary;
+    color: white;
+    margin-bottom: 0;
+}
+
+.navbar-primary .icon-large {
+    margin-top: 5px;
+}
+
+.bg-white {
+    background: #fff;
+}
+
+.bg-dark {
+    background: #333;
+}
+
+.main {
+    padding-top: 15px;
+}
+
+footer {
+    height: 35px;
+    line-height: 35px;
+}
+
+.panel-group .panel,
+.panel-group .panel-heading {
+    border-radius: 0;
+}
+
+.panel-default > .panel-heading {
+    background-color: #333;
+    color: white;
+}
+
+.panel-title span:focus {
+    outline: 0;
+}
+
+input.ng-invalid {
+  background: @light-primary;
+}

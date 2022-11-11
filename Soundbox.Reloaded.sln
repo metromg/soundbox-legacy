@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soundbox.Reloaded.Core", "Soundbox.Reloaded.Core\Soundbox.Reloaded.Core.csproj", "{6B80CF7C-4A27-45F7-A1D2-7D065B836764}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soundbox.Reloaded.Infrastructure", "Soundbox.Reloaded.Infrastructure\Soundbox.Reloaded.Infrastructure.csproj", "{733C72A0-792E-4498-841E-EAF9571085C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soundbox.Reloaded.Infrastructure.DbAccess", "Soundbox.Reloaded.Infrastructure.DbAccess\Soundbox.Reloaded.Infrastructure.DbAccess.csproj", "{A4F5AFF1-FB47-4455-B018-6F6D5DA27D5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soundbox.Reloaded.Ui.Presentation", "Soundbox.Reloaded.Ui.Presentation\Soundbox.Reloaded.Ui.Presentation.csproj", "{86CCAAAA-6F11-4C7E-8182-1B0DC3BEFEC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Soundbox.Reloaded.Ui.Web", "Soundbox.Reloaded.Ui.Web\Soundbox.Reloaded.Ui.Web.csproj", "{9B485F59-C051-4370-8FA1-C21A9D186853}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B80CF7C-4A27-45F7-A1D2-7D065B836764}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B80CF7C-4A27-45F7-A1D2-7D065B836764}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B80CF7C-4A27-45F7-A1D2-7D065B836764}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B80CF7C-4A27-45F7-A1D2-7D065B836764}.Release|Any CPU.Build.0 = Release|Any CPU
+		{733C72A0-792E-4498-841E-EAF9571085C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{733C72A0-792E-4498-841E-EAF9571085C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{733C72A0-792E-4498-841E-EAF9571085C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{733C72A0-792E-4498-841E-EAF9571085C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4F5AFF1-FB47-4455-B018-6F6D5DA27D5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4F5AFF1-FB47-4455-B018-6F6D5DA27D5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4F5AFF1-FB47-4455-B018-6F6D5DA27D5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4F5AFF1-FB47-4455-B018-6F6D5DA27D5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86CCAAAA-6F11-4C7E-8182-1B0DC3BEFEC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86CCAAAA-6F11-4C7E-8182-1B0DC3BEFEC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86CCAAAA-6F11-4C7E-8182-1B0DC3BEFEC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86CCAAAA-6F11-4C7E-8182-1B0DC3BEFEC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B485F59-C051-4370-8FA1-C21A9D186853}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B485F59-C051-4370-8FA1-C21A9D186853}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B485F59-C051-4370-8FA1-C21A9D186853}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B485F59-C051-4370-8FA1-C21A9D186853}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "gulp": "3.9.0",
+    "gulp-shell": "0.5.0",
+    "typescript": "1.6.2",
+    "less": "2.5.3",
+    "flatten-deps": "0.2.2"
+  },
+  "scripts": {
+    "install": "flatten-deps"
+  }
+}
